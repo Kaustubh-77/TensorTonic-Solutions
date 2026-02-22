@@ -5,10 +5,10 @@ def precision_recall_at_k(recommended, relevant, k):
     # Write code here
     recommended=recommended[:k]
     prec=len(set(recommended).intersection(set(relevant)))/k
-    if k==0:
-        prec=0
+    # if k==0:
+    #     prec=0
     rec=len(set(recommended).intersection(set(relevant)))/len(relevant)
-    if len(relevant)==0:
-        rec=0
+    # if len(relevant)==0:
+    #     rec=0
     return [prec,rec]
     
